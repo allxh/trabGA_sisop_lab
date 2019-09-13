@@ -4,7 +4,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <stdbool.h>
-/*
+
 int contador;
 
 void load_firefox(char *url[]){
@@ -31,7 +31,7 @@ void load_firefox(char *url[]){
 void start_browser(char *url[]){
         load_firefox(url);
 }
- */
+ 
 
 void openGedit(){
 	printf("Abre editor de texto");
@@ -73,7 +73,11 @@ int main(int argc, char *argv[]){
 			
 			switch(entradaDoUsuario){
 			case(1) :
-				printf("Abre Firefox");
+				//printf("Abre Firefox");
+                                char url[];
+                                printf("Informe uma url: ");
+                                scanf("%s",&char);
+                                start_browser(url);
 				break;
 			case(2) :
 				openGedit();
